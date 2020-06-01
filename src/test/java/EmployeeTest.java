@@ -38,4 +38,22 @@ public class EmployeeTest {
         assertEquals(1.5, employee.payBonus(), 0.01);
     }
 
+    @Test
+    public void canSetName(){
+        employee.setName("Gene");
+        assertEquals("Gene", employee.getName());
+    }
+
+    @Test
+    public void cantEnterNullValue(){
+        employee.setName(null);
+        assertEquals("Bob", employee.getName());
+    }
+
+    @Test
+    public void cantHaveNegativeSalary(){
+        employee.raiseSalary(-5000);
+        assertEquals(150, employee.getSalary(), 0.01);
+    }
+
 }
