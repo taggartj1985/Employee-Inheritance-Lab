@@ -1,3 +1,5 @@
+package staff;
+
 public class Employee {
 
     private String name;
